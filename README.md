@@ -18,7 +18,8 @@ When the budget object is printed it should display:
 - A line displaying the category total.
 <br />
 Here is an example usage:
-```
+
+```python
 food = Category('Food')
 food.deposit(1000, 'deposit')
 food.withdraw(10.15, 'groceries')
@@ -27,8 +28,10 @@ clothing = Category('Clothing')
 food.transfer(50, clothing)
 print(food)
 ```
+
 And here is an example of the output:
-```
+
+```python
 *************Food*************
 initial deposit        1000.00
 groceries               -10.15
@@ -36,12 +39,14 @@ restaurant and more foo -15.89
 Transfer to Clothing    -50.00
 Total: 923.96
 ```
+
 Besides the Category class, a function (outside of the class) called create_spend_chart takes a list of categories as an argument. It should return a string that is a bar chart.
 The chart should show the percentage spent in each category passed in to the function. The percentage spent should be calculated only with withdrawals and not with deposits. Down the left side of the chart should be labels 0 - 100. The 'bars' in the bar chart should be made out of the 'o' character. The height of each bar should be rounded down to the nearest 10. The horizontal line below the bars should go two spaces past the final bar. Each category name should be written vertically below the bar. There should be a title at the top that says 'Percentage spent by category'.
 This function will be tested with up to four categories.
 <br />
 Example Output:
-```
+
+```python
 Percentage spent by category
 100|          
  90|          
