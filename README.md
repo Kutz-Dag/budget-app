@@ -16,8 +16,8 @@ When the budget object is printed it should display:
 - A title line of 30 characters where the name of the category is centered in a line of * characters.
 - A list of the items in the ledger. Each line should show the description and amount. The first 23 characters of the description should be displayed, then the amount. The amount should be right aligned, contain two decimal places, and display a maximum of 7 characters.
 - A line displaying the category total.
-<br />
-Here is an example usage:
+
+### Here is an example usage:
 
 ```python
 food = Category('Food')
@@ -29,7 +29,7 @@ food.transfer(50, clothing)
 print(food)
 ```
 
-And here is an example of the output:
+### And here is an example of the output:
 
 ```python
 *************Food*************
@@ -43,8 +43,8 @@ Total: 923.96
 Besides the Category class, a function (outside of the class) called create_spend_chart takes a list of categories as an argument. It should return a string that is a bar chart.
 The chart should show the percentage spent in each category passed in to the function. The percentage spent should be calculated only with withdrawals and not with deposits. Down the left side of the chart should be labels 0 - 100. The 'bars' in the bar chart should be made out of the 'o' character. The height of each bar should be rounded down to the nearest 10. The horizontal line below the bars should go two spaces past the final bar. Each category name should be written vertically below the bar. There should be a title at the top that says 'Percentage spent by category'.
 This function will be tested with up to four categories.
-<br />
-Example Output:
+
+### Example Output:
 
 ```python
 Percentage spent by category
@@ -69,3 +69,23 @@ Percentage spent by category
         n     
         g
 ```
+
+### User stories/tests to pass:
+
+- [x] 1. The deposit method should create a specific object in the ledger instance variable.
+- [x] 2. Calling the deposit method with no description should create a blank description.
+- [x] 3. The withdraw method should create a specific object in the ledger instance variable.
+- [x] 4. Calling the withdraw method with no description should create a blank description.
+- [x] 5. The withdraw method should return True if the withdrawal took place.
+- [x] 6. Calling food.deposit(900, 'deposit') and food.withdraw(45.67, 'milk, cereal, eggs, bacon, bread') should return a balance of 854.33.
+- [x] 7. Calling the transfer method on a category object should create a specific ledger item in that category object.
+- [x] 8. The transfer method should return True if the transfer took place.
+- [x] 9. Calling transfer on a category object should reduce the balance in the category object.
+- [x] 10. The transfer method should increase the balance of the category object passed as its argument.
+- [x] 11. The transfer method should create a specific ledger item in the category object passed as its argument.
+- [x] 12. The check_funds method should return False if the amount passed to the method is greater than the category balance.
+- [x] 13. The check_funds method should return True if the amount passed to the method is not greater than the category balance.
+- [x] 14. The withdraw method should return False if the withdrawal didn't take place.
+- [x] 15. The transfer method should return False if the transfer didn't take place.
+- [x] 16. Printing a Category instance should give a different string representation of the object.
+- [x] 17. create_spend_chart should print a different chart representation. Check that all spacing is exact.
