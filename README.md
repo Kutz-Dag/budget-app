@@ -17,7 +17,7 @@ When the budget object is printed it should display:
 - A list of the items in the ledger. Each line should show the description and amount. The first 23 characters of the description should be displayed, then the amount. The amount should be right aligned, contain two decimal places, and display a maximum of 7 characters.
 - A line displaying the category total.
 
-### Here is an example usage:
+#### Here is an example usage:
 
 ```python
 food = Category('Food')
@@ -29,9 +29,9 @@ food.transfer(50, clothing)
 print(food)
 ```
 
-### And here is an example of the output:
+#### And here is an example of the output:
 
-```python
+```
 *************Food*************
 initial deposit        1000.00
 groceries               -10.15
@@ -44,9 +44,9 @@ Besides the Category class, a function (outside of the class) called create_spen
 The chart should show the percentage spent in each category passed in to the function. The percentage spent should be calculated only with withdrawals and not with deposits. Down the left side of the chart should be labels 0 - 100. The 'bars' in the bar chart should be made out of the 'o' character. The height of each bar should be rounded down to the nearest 10. The horizontal line below the bars should go two spaces past the final bar. Each category name should be written vertically below the bar. There should be a title at the top that says 'Percentage spent by category'.
 This function will be tested with up to four categories.
 
-### Example Output:
+#### Example Output:
 
-```python
+```
 Percentage spent by category
 100|          
  90|          
